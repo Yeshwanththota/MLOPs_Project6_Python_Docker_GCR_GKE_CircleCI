@@ -8,14 +8,11 @@ executors:
       - image: google/cloud-sdk:latest
     working_directory: ~/repo
 jobs:
-  checkout_code:
-    executor: docker-executor
-    steps:
-      - checkout
+  
   build_docker_image:
     executor: docker-executor
     steps:
-      - checkout_code
+      - checkout
       - setup_remote_docker
       - run:
           name: Authenticate with Google Cloud
@@ -31,7 +28,7 @@ jobs:
   deploy_to_Gkubernetes:
     executor: docker-executor
     steps:
-      - checkout_code
+      - checkout
       - setup_remote_docker
       - run:
           name: Authenticate with Google Cloud
@@ -51,10 +48,9 @@ workflows:
   version: 2
   build_and_deploy:
     jobs:
-      - checkout_code
-      - build_docker_image:
-          requires:
-            - checkout_code
+    
+      - build_docker_image
+          
       - deploy_to_Gkubernetes:
           requires:
             - build_docker_image
