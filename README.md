@@ -8,6 +8,8 @@
   <img src="https://img.shields.io/badge/CircleCI-343434?style=for-the-badge&logo=circleci&logoColor=white" alt="CircleCI"/>
 </p>
 
+** Go to MLOPS_project6_results for outputs**
+
 Step 1
 Project Setup
 1.	Creating virtual Environment in project folder.
