@@ -8,7 +8,10 @@
   <img src="https://img.shields.io/badge/CircleCI-343434?style=for-the-badge&logo=circleci&logoColor=white" alt="CircleCI"/>
 </p>
 
-** Go to MLOPS_project6_results for outputs**
+**Summary**
+Automated the build, test, and deployment process using CircleCI as the CI/CD tool. Deployed Dockerized ML applications to Google Kubernetes Engine (GKE), managed secrets and service accounts securely, and monitored deployments via GCP.
+
+**Go to MLOPS_project6_results for outputs**
 
 Step 1
 Project Setup
